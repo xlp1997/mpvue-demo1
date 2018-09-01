@@ -9,10 +9,12 @@
     </swiper-item>
   </block>
 </swiper>
-
+    <click-counter />
   </div>
 </template>
 <script>
+import ClickCounter from '@/components/click-counter'
+
 export default {
   data () {
     return {
@@ -37,7 +39,9 @@ export default {
       console.log('index' + '-----' + event)
     }
 
-  }
+  },
+  components: { ClickCounter }
+
 }
 </script>
 
