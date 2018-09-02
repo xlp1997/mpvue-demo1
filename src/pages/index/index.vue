@@ -9,11 +9,14 @@
     </swiper-item>
   </block>
 </swiper>
-    <click-counter />
+<clickCounter :initNum="10" @clicknum="handleClicknum">
+        <input type="checkbox" /> 禁用
+
+</clickCounter>
   </div>
 </template>
 <script>
-import ClickCounter from '@/components/click-counter'
+import clickCounter from '@/components/click-counter'
 
 export default {
   data () {
@@ -30,18 +33,18 @@ export default {
       // duration: 1000
     }
   },
-
+  components: {clickCounter},
   methods: {
     clickHandle () {
       this.msg = 'Clicked!!!!!!'
     },
     onItemClick: function (event) {
       console.log('index' + '-----' + event)
+    },
+    handleClicknum (data) {
+      console.log(data.num)
     }
-
-  },
-  components: { ClickCounter }
-
+  }
 }
 </script>
 
