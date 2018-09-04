@@ -30,6 +30,19 @@ export default {
     }).then(res => {
       console.log(res)
     })
+    this.$httpWX.post({
+      url: '/mms/country/queryValidZoneListForMallHome',
+      data: {
+        'categoryType': 'SaleGoodsType@sim',
+        'streamNo': 'web_bss153570682909641893',
+        'reqSource': 'MALL_H5',
+        'appid': 'string',
+        'timestamp': 1535706829096,
+        'sign': 'string'
+      }
+    }).then(res => {
+      console.log(res)
+    })
   }
 }
 </script>
